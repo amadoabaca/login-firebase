@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+     <!-- Firebase JS SDK  -->
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-analytics.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-storage.js"></script>
+
+     <script>
+     // web app Firebase configuration
+     var firebaseConfig = {
+         apiKey: "AIzaSyCeWXOYDBXT883xqyMqUj7M9Crx70fbDEw",
+         authDomain: "tienda-carrito.firebaseapp.com",
+         databaseURL: "https://tienda-carrito.firebaseio.com",
+         projectId: "tienda-carrito",
+         storageBucket: "tienda-carrito.appspot.com",
+         messagingSenderId: "962754131078",
+         appId: "1:962754131078:web:d8cd57a2fb3c62633e4d07",
+         measurementId: "G-1H8G6P9DC4"
+     };
+         // Initialize Firebase
+         firebase.initializeApp(firebaseConfig);
+         firebase.analytics();
+     </script>
+    <title>Firebase login</title>
+</head>
+<body>
+        <!-- inicio Sesion -->
+    <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand">Iniciar Sesion</a>
+            <div class="form-inline">
+                <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2">
+                <input id="password2" type="password" placeholder="Ingresa contraseña" class="form-control form-control-sm mr-sm-2">
+              <button class="btn btn-outline-light my-2 my-sm-0 btn-sm" onclick="iniciar()">Acceder</button>
+              <button class="btn btn-outline-light my-2 my-sm-0 btn-sm ml-2" onclick="google()" id="google">Con Google</button>
+              <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" data-toggle="modal" data-target="#exampleModal">Registrate</button>
+            </div>
+          </nav>
+    </div>
+
+        <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Registrate</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <input id="email" type="email" placeholder="Ingresa email" class="form-control mb-2">
+                <input id="password" type="password" placeholder="Ingresa contraseña" class="form-control">
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-danger" onclick="registrar()">Guardar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="mostrar">
+        
+    </div>
+    
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
