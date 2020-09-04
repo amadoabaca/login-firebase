@@ -36,7 +36,7 @@ function iniciar(){
         console.log("error");
         mostrar.innerHTML = `
         <div class="container mt-5">
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-dark" role="alert">
                 <h4 class="alert-heading">Error</h4>
                 <hr>
                 <p>El usuario o la contraseña no son correctos. Por favor intente de nuevo.</p>
@@ -85,7 +85,7 @@ function aparece(user){
     if(user.emailVerified){
         mostrar.innerHTML = `
         <div class="container mt-5">
-            <div class="alert alert-success" role="alert">
+            <div class="alert alert-dark" role="alert">
                 <h4 class="alert-heading">Bienvenido! ${user.email}</h4>
                 <p>Ahora tenés acceso a contenido exclusivo!</p>
                 <hr>
@@ -116,6 +116,16 @@ function verificar(){
     user.sendEmailVerification().then(function() {
     // Email sent.
     console.log("enviando correo")
+    mostrar.innerHTML = `
+        <div class="container mt-5">
+            <div class="alert alert-dark" role="alert">
+                <h4 class="alert-heading">Verifica tu email</h4>
+                <hr>
+                <p>Te enviamos un mail para que verifiques tu correo. Una vez verificado podras ingresar.</p>
+            </div>
+        </div>
+
+        `;
     }).catch(function(error) {
     // An error happened.
     console.log("error correo")
@@ -127,7 +137,7 @@ function google(){
         var provider = new firebase.auth.GoogleAuthProvider();
 
         firebase.auth().signInWithPopup(provider).then(function(user){
-            alert("Google signin");
+            console.log("Google signin");
         }).catch(function(error){
             console.log(error);
         })
