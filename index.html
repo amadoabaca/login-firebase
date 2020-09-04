@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
     <!-- bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
@@ -35,14 +37,15 @@
 <body>
         <!-- inicio Sesion -->
     <div class="container">
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-dark bg-dark nav">
             <a class="navbar-brand">Iniciar Sesion</a>
             <div class="form-inline">
-                <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2">
-                <input id="password2" type="password" placeholder="Ingresa contraseña" class="form-control form-control-sm mr-sm-2">
-              <button class="btn btn-outline-light my-2 my-sm-0 btn-sm" onclick="iniciar()">Acceder</button>
-              <button class="btn btn-outline-light my-2 my-sm-0 btn-sm ml-2" onclick="google()" id="google">Con Google</button>
-              <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" data-toggle="modal" data-target="#exampleModal">Registrate</button>
+                <input id="email2" type="email" placeholder="Ingresa email" class="form-control form-control-sm mr-sm-2 mov">
+                <input id="password2" type="password" placeholder="Ingresa contraseña" class="form-control form-control-sm mr-sm-2 mov">
+                <button class="btn btn-outline-light my-2 my-sm-0 btn-sm mov1" onclick="iniciar()">Acceder</button>
+                <div class="vl ml-3 mr-3 mov"></div>
+                <button class="btn btn-outline-light my-2 my-sm-0 btn-sm" onclick="google()" id="google"><i class="fab fa-google"></i></button>
+                <button class="btn btn-danger my-2 my-sm-0 btn-sm ml-2" data-toggle="modal" data-target="#exampleModal">Registrate</button>
             </div>
           </nav>
     </div>
@@ -63,13 +66,13 @@
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-danger" onclick="registrar()">Guardar</button>
+            <button type="button" class="btn btn-danger" onclick="registrar()" data-dismiss="modal">Guardar</button>
             </div>
         </div>
         </div>
     </div>
 
-    <div id="mostrar">
+    <div id="mostrar"></div>
         
     </div>
     
